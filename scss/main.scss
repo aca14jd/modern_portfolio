@@ -82,8 +82,8 @@ main{
 
   .bio-image{
     grid-area: bioimage;
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     margin: auto;
     border-radius: 50%;
     border: solid 3px $secondary-color;
@@ -150,7 +150,7 @@ main{
       padding: 0.5rem 1.5rem;
       background: $secondary-color;
       color: set-text-color($secondary-color);
-      
+
       span{
         color: set-text-color($secondary-color);
       }
