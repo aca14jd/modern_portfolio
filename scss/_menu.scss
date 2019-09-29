@@ -64,7 +64,7 @@
     &-nav{
         margin: 0;
         padding: 0;
-        background: rgba(darken($primary-color, 5), 0.9); //darkens primary color
+        background: rgba(darken($primary-color, 5), 0.98); //darkens primary color
         list-style: none; //gets rid of bullet points on links
         transform: translate3d(0, -100%, 0);
         @include ease0ut;
@@ -83,6 +83,15 @@
         &.show{
             transform: translate3d(0, 0, 0); //Slide in from bottom
         }
+
+        .portrait{
+            width: 250px;
+            height: 250px;
+            background: url(../img/portrait.jpg);
+            background-size: cover;
+            border-radius: 50%;
+            border: solid 3px $secondary-color;
+          }
     }
 
     .nav-item{
