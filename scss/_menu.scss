@@ -36,5 +36,77 @@
             }
         }
     }
+}
 
+// Menu Overlay
+
+.menu{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    opacity: 0.9;
+    visibility: hidden;
+
+    &.show{
+        visibility: visible;
+    }
+
+    &-branding, &-nav{
+        display: flex;
+        flex-flow: column wrap; //puts the links in columns
+        align-items: center; // centers items vertically
+        justify-content: center;
+        float: left;
+        width: 50%;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    &-nav{
+        margin: 0;
+        padding: 0;
+        background: darken($primary-color, 5); //darkens primary color
+        list-style: none; //gets rid of bullet points on links
+        transform: translate3d(0, -100%, 0);
+        @include ease0ut;
+
+        &.show{
+            transform: translate3d(0, 0, 0); //Slide in from top
+        }
+    }
+
+    //Branding Side
+    &-branding{
+        background: $primary-color;
+        transform: translate3d(0, 100%, 0);
+        @include ease0ut;
+
+        &.show{
+            transform: translate3d(0, 0, 0); //Slide in from bottom
+        }
+
+        .protrait{
+            width: 250px;
+            height: 250px;
+            background: url('../img/portrait.jpg');
+            border-radius: 50%;
+            border: solid 3px $secondary-color;
+        }
+    }
+
+    .nav-item{
+        transform: translate3d(600px, 0, 0);
+        @include ease0ut;
+
+        &.show{
+            transform: translate3d(0, 0, 0,); //Slide in from right
+        }
+    }
+}
+
+// Delay each nav item slide by 0.1s
+@for $x from 1 through 4 {
+    .nav-item:nth-child(#{$x}) {
+        transition-delay: $x * 0.1s;
+    }
 }
