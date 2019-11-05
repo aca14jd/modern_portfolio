@@ -2,6 +2,8 @@
 @import 'menu';
 
 *{
+  margin: 0px;
+  padding: 0px;
   box-sizing: border-box;
 }
 
@@ -35,6 +37,7 @@ h1, h2, h3 {
 a {
   color: #fff;
   text-decoration: none;
+  font-size: 1.2rem;
 }
 
 header {
@@ -45,6 +48,10 @@ header {
 
 .text-secondary{
   color:  $secondary-color;
+}
+
+.sub-heading{
+  font-size: 2.2rem;
 }
 
 main{
@@ -72,13 +79,17 @@ main{
   }
 }
 
+// Home
+
+#home{
+  height: 90vh;
+  position: absolute;
+}
+
+// About
+
 .about-info{
   display: grid;
-  grid-gap: 30px;
-  grid-template-areas:
-  'bioimage bio bio'
-  'job1 job2 job3';
-  grid-template-columns: repeat(3, 1fr);
 
   .bio-image{
     grid-area: bioimage;
@@ -93,27 +104,10 @@ main{
     grid-area: bio;
     font-size: 1.5rem;
   }
-
-  .job-1{
-    grid-area: job1;
-  }
-
-  .job-2{
-    grid-area: job2;
-  }
-
-  .job-3{
-    grid-area: job3;
-  }
-
-  .job{
-    background: lighten($primary-color, 5);
-    padding: 0.5rem;
-    border-bottom: $secondary-color 5px solid;
-  }
 }
 
 // Work/Projects
+
 .projects{
   display: grid;
   grid-gap: 0.7rem;
@@ -132,6 +126,7 @@ main{
 }
 
 // Contact Page
+
 .boxes{
   display: flex;
   flex-wrap: wrap;
@@ -147,7 +142,6 @@ main{
     @include ease0ut;
 
     &:hover{
-      padding: 0.5rem 1.5rem;
       background: $secondary-color;
       color: set-text-color($secondary-color);
 
@@ -159,35 +153,44 @@ main{
 }
 
 // Button Styles
+
 .btn{
   display: block;
   padding: 0.5rem 1rem;
   border: 0;
   margin-bottom: 0.3rem;
   &:hover{
-    background: $secondary-color;
-    color: set-text-color($secondary-color);
+    @include ease0ut;
+    background: darken($secondary-color, 20);
+    color: set-text-color(darken($secondary-color, 50));
   }
 }
 
 .btn-dark{
   @extend .btn;
   background: darken($primary-color, 50);
-  color: #fff;
+  color: set-text-color(darken($primary-color, 50));
 }
 
 .btn-light{
   @extend .btn;
   background: lighten($primary-color, 50);
-  color: #333;
+  color: set-text-color(lighten($primary-color, 50));
+}
+
+.btn-secondary{
+  @extend .btn;
+  background: $secondary-color;
+  color: set-text-color($secondary-color);
 }
 
 #main-footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   text-align: center;
-  padding: 1rem;
   background: darken($primary-color, 10);
   color: set-text-color($primary-color);
-  height: 60px;
 }
 
 @import 'mobile';

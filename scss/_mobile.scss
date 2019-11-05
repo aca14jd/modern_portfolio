@@ -1,5 +1,15 @@
 //Widescreens
 @include mediaXl{
+    html{
+        font-size: 100%;
+    }
+
+    .about-info{
+        grid-template-areas:
+        'bioimage bio bio bio';
+        grid-template-columns: repeat(4, 1fr);
+    }
+
     .projects{
         grid-template-columns: repeat(4, 1fr);
     }
@@ -7,6 +17,16 @@
 
 //Desktops and Laptops
 @include mediaLg{
+    html{
+        font-size: 100%;
+    }
+
+    .about-info{
+        grid-template-areas:
+        'bioimage bio bio bio';
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
     .projects{
         grid-template-columns: repeat(3, 1fr);
     }
@@ -14,6 +34,10 @@
 
 //Tablets and Small Laptops
 @include mediaMd{
+    html{
+        font-size: 90%;
+    }
+
     main {
         align-items: center;
         text-align: center;
@@ -53,11 +77,7 @@
     .about-info{
         grid-template-areas:
         'bioimage'
-        'bio'
-        'job1'
-        'job2'
-        'job3';
-
+        'bio';
         grid-template-columns: 1fr;
     }
 
@@ -68,8 +88,19 @@
 
 //Smartphones
 @include mediaSm{
+    html{
+        font-size: 80%;
+    }
+
     main#home h1{
         margin-top: 10vh;
+    }
+
+    .about-info{
+        grid-template-areas:
+        'bioimage'
+        'bio';
+        grid-template-columns: 1fr;
     }
 
     .projects{
