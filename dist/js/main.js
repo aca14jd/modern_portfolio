@@ -1,3 +1,5 @@
+// Swup
+
 const swup = new Swup();
 
 // Menu Bar
@@ -32,7 +34,6 @@ function removeHamburger() {
         menuNav.classList.add("show");
         navItems.forEach(item => item.classList.add("show"));
         menuBtn.classList.toggle("hide");
-        console.log("test1");
     }
 }
 
@@ -43,10 +44,13 @@ function addHamburger() {
         menuNav.classList.remove("show");
         navItems.forEach(item => item.classList.remove("show"));
         menuBtn.classList.toggle("hide");
-        console.log("test2");
     }
 }
 
 removeHamburger(); // Call listener function at run time
 mediaSm.addListener(addHamburger);
 mediaLg.addListener(removeHamburger);
+
+// Date
+
+document.getElementById("year").innerHTML = new Date().getFullYear();
