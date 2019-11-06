@@ -248,7 +248,7 @@ html.is-leaving .transition-fade {
     margin-left: 5vw;
     margin-right: 5vw; }
   #home {
-    top: 30vh; }
+    top: 25vh; }
   .about-info {
     grid-template-areas: 'bioimage bio bio bio';
     grid-template-columns: repeat(4, 1fr); }
@@ -266,7 +266,7 @@ html.is-leaving .transition-fade {
     margin-left: 5vw;
     margin-right: 5vw; }
   #home {
-    top: 30vh; }
+    top: 25vh; }
   .about-info {
     grid-template-areas: 'bioimage bio bio bio';
     grid-template-columns: repeat(4, 1fr); }
