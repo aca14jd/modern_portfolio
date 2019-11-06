@@ -105,9 +105,16 @@
     }
 }
 
-// Delay each nav item slide by 0.1s
+.hide {
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+// Delay each nav item slide
 @for $x from 1 through 4 {
     .nav-item:nth-child(#{$x}) {
-        transition-delay: $x * 0.1s;
+        transition-delay: $x * 0.05s;
     }
 }

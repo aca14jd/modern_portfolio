@@ -67,7 +67,7 @@ header {
 main{
   padding: 3rem;
   height: 100%;
-  min-height: calc(100vh - 60px);
+  min-height: 100vh;
 
   .icons {
     margin-top: 1rem;
@@ -81,12 +81,15 @@ main{
       }
     }
   }
-  &#home {
-    overflow: hidden;
-    h1{
-      margin-top: 20vh;
-    }
-  }
+}
+
+// Home
+
+#home {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  left: 0;
 }
 
 // About
@@ -94,13 +97,18 @@ main{
 .about-info{
   display: grid;
 
-  .bio-image{
+  .bio-image-container{
     grid-area: bioimage;
     width: 200px;
     height: 200px;
     margin: auto;
     border-radius: 50%;
     border: solid 3px $secondary-color;
+    overflow: hidden;
+  }
+
+  .bio-image {
+    width: 100%;
   }
 
   .bio{
@@ -187,15 +195,23 @@ main{
   color: set-text-color($secondary-color);
 }
 
-// Transitions
+// Swup Transitions
 
 .transition-fade {
-  transition: .4s;
+  @include ease0ut;
   opacity: 1;
+  transform: translateY(0);
+  transform-origin: top;
 }
 
 html.is-animating .transition-fade {
   opacity: 0;
+  transform: translateY(30%);
+}
+
+html.is-leaving .transition-fade {
+  opacity: 0;
+  transform: translateY(0);
 }
 
 // Footer
