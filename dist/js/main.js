@@ -25,7 +25,7 @@ function toggleMenu() {
 
 // Media Queries
 
-var mediaSm = window.matchMedia("(min-width: 500px) and (max-width: 768px)");
+var mediaSm = window.matchMedia("(max-width: 768px)");
 var mediaLg = window.matchMedia("(min-width: 769px)");
 
 function removeHamburger() {
@@ -33,7 +33,8 @@ function removeHamburger() {
         menu.classList.add("show");
         menuNav.classList.add("show");
         navItems.forEach(item => item.classList.add("show"));
-        menuBtn.classList.toggle("hide");
+        menuBtn.classList.add("hide");
+        console.log("test1");
     }
 }
 
@@ -43,7 +44,8 @@ function addHamburger() {
         menu.classList.remove("show");
         menuNav.classList.remove("show");
         navItems.forEach(item => item.classList.remove("show"));
-        menuBtn.classList.toggle("hide");
+        menuBtn.classList.remove("hide");
+        console.log("test2");
     }
 }
 
