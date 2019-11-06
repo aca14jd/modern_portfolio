@@ -1,0 +1,118 @@
+// Menu Button
+
+.menu-overlay {
+  position: fixed;
+  z-index: 2;
+  right: 0;
+  top: 0;
+  height: 10vh;
+  width: 83px;
+  background-color: rgba($grey-color, $background-opacity);
+}
+
+.menu-btn {
+  position: fixed;
+  z-index: 3;
+  right: 20px;
+  top: 3vh;
+  cursor: pointer;
+  @include ease0ut;
+
+  .btn-line {
+    width: 40px;
+    height: 4px;
+    margin: 0 0 8px 0;
+    border-radius: 3px;
+    background: #fff;
+    position: relative;
+    @include ease0ut;
+  }
+
+  // Rotate Into X With Menu Lines
+
+  &.close {
+
+
+    .btn-line {
+      // Line 1 - Rotate
+      &:nth-child(1) {
+        transform: translateY(12px) rotate(135deg);
+      }
+      // Line 2 - Hide
+      &:nth-child(2) {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);
+      }
+      // Line 3 - Rotate
+      &:nth-child(3) {
+        transform: translateY(-12px) rotate(-135deg);
+      }
+    }
+  }
+}
+
+// Menu Overlay
+
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  visibility: hidden;
+
+  &.show {
+    visibility: visible;
+  }
+
+  &-nav {
+    display: flex;
+    align-items: center; // centers items vertically
+    justify-content: center;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background: rgba(
+      darken($grey-color, $background-opacity),
+      0.9
+    ); //darkens primary color
+    list-style: none; //gets rid of bullet points on links
+    transform: translate3d(0, -100%, 0);
+    @include ease0ut;
+
+    &.show {
+      transform: translate3d(0, 0, 0); //Slide in from top
+    }
+  }
+
+  .nav-item {
+    transform: translate3d(600px, 0, 0);
+    @include ease0ut;
+
+    &.show {
+      transform: translate3d(0, 0, 0); //Slide in from right
+    }
+  }
+
+  .nav-link {
+    display: inline-block;
+    position: relative;
+    font-size: 30px;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    font-weight: 500;
+    color: set-text-color($grey-color);
+    text-decoration: none;
+    @include ease0ut;
+
+    &:hover {
+      color: $third-color;
+    }
+  }
+}
+
+// Delay each nav item slide by 0.1s
+@for $x from 1 through 4 {
+  .nav-item:nth-child(#{$x}) {
+    transition-delay: $x * 0.1s;
+  }
+}

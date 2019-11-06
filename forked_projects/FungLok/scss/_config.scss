@@ -1,0 +1,47 @@
+$primary-color: #4d79ff;
+$secondary-color: #ffe74b;
+$third-color: #ff726f;
+$grey-color: #3d3d3d;
+$background-opacity: 0.5;
+$home: url(../img/home.jpg);
+$food: url(../img/food.jpg);
+$contact: url(../img/contact.jpg);
+
+@mixin ease0ut {
+  transition: all 0.5s ease;
+}
+
+// Set Text Color
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
+
+// Media Query Mixins
+
+@mixin mediaSm {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin mediaMd {
+  @media screen and (min-width: 501px) and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mediaLg {
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
+}
+
+@mixin mediaXl {
+  @media screen and (min-width: 1171px) {
+    @content;
+  }
+}

@@ -1,85 +1,75 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="css/main.css">
-    <script src="https://kit.fontawesome.com/9dd8d9e3d3.js" crossorigin="anonymous"></script>
-    <title>About Me</title>
-  </head>
-  <body>
-    <header>
-      <div class="menu-btn">
-        <div class="btn-line"></div>
-        <div class="btn-line"></div>
-        <div class="btn-line"></div>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/main.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://kit.fontawesome.com/9dd8d9e3d3.js" crossorigin="anonymous"></script>
+  <title>About Me</title>
+</head>
+
+<body id="bg-img">
+  <header>
+    <div class="menu-btn">
+      <div class="btn-line"></div>
+      <div class="btn-line"></div>
+      <div class="btn-line"></div>
+    </div>
+    <nav class="menu">
+      <ul class="menu-nav">
+        <li class="nav-item">
+          <a href="/dist/index.html" class="nav-link">
+            Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/dist/about.html" class="nav-link">
+            About Me
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/dist/work.html" class="nav-link">
+            My Work
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/dist/contact.html" class="nav-link">
+            Contact Me
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="swup" class="transition-fade">
+    <h1 class="lg-heading">
+      About <span class="text-secondary">Me</span>
+    </h1>
+    <h2 class="sm-heading">
+      Let me tell you a few things...
+    </h2>
+    <div class="about-info">
+      <div class="bio-image-container"><img src="img/portrait.jpeg" alt="Jason Diep" class="bio-image"></div>
+      <div class="bio">
+        <h3 class="text-secondary sub-heading">Jason Diep</h3>
+        <p>I am a web developer and designer who has a passion for learning new technology. I have been learning
+          for 4 months and currently looking for a junior web developer/designer position as I wish to become more
+          flexible in my work. I enjoy spending time watching web development videos on YouTube particularly by
+          Stefan Mischook, Traversy, and Dev Ed. I have learned how to use HTML5, CSS3, Javascript, Git|GitHub, npm,
+          Sass, Swup, MySQL, and PHP. Currently I am learning React as it is the most desired framework for
+          Frontend development and I would like to specialise in Frontend development. Other than coding, I enjoy
+          spending time with friends and family, going to the gym, and playing badminton.</p>
       </div>
-      <nav class="menu">
-        <div class="menu-branding">
-          <div class="portrait"></div>
-        </div>
-        <ul class="menu-nav">
-          <li class="nav-item">
-            <a href="index.html" class="nav-link">
-              Home
-            </a>
-          </li>
-          <li class="nav-item current">
-            <a href="about.html" class="nav-link">
-              About Me
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="work.html" class="nav-link">
-              My Work
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="contact.html" class="nav-link">
-              Contact Me
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    </div>
+  </main>
 
-    <main id="about">
-      <h1 class="lg-heading">
-        About <span class="text-secondary">Me</span>
-      </h1>
-      <h2 class="sm-heading">
-        Let me tell you a few things...
-      </h2>
-      <div class="about-info">
-        <img src="img/portrait.jpg" alt="Jason Diep" class="bio-image">
-          <div class="bio">
-              <h3 class="text-secondary">BIO</h3>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione, eos error rem veniam excepturi reprehenderit sed vel omnis itaque tempora, voluptates dicta facilis aspernatur debitis reiciendis odio architecto, cupiditate porro!</p>
-          </div>
+  <footer id="main-footer">
+    Copyright &copy; <span id="year"></span>
+  </footer>
 
-          <div class="job job-1">
-              <h3>123 Webshop</h3>
-              <h6>Full Stack Developer</h6>
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi voluptatem atque itaque nesciunt deserunt beatae dicta quo inventore dolore facere!</p>
-          </div>
+  <script src="js/swup.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
 
-          <div class="job job-2">
-              <h3>123 Webshop</h3>
-              <h6>Front End Developer</h6>
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi voluptatem atque itaque nesciunt deserunt beatae dicta quo inventore dolore facere!</p>
-          </div>
-
-          <div class="job job-3">
-              <h3>123 Webshop</h3>
-              <h6>Graphic Designer</h6>
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi voluptatem atque itaque nesciunt deserunt beatae dicta quo inventore dolore facere!</p>
-          </div>
-      </div>
-    </main>
-
-    <footer id="main-footer">
-        Copyright &copy; 2019
-    </footer>
-
-    <script src="js/main.js"></script>
-  </body>
 </html>
