@@ -9,7 +9,7 @@
   <title>About Me</title>
 </head>
 
-<body>
+<body id="bg-img">
   <header>
     <div class="menu-btn">
       <div class="btn-line"></div>
@@ -17,27 +17,24 @@
       <div class="btn-line"></div>
     </div>
     <nav class="menu">
-      <div class="menu-branding">
-        <div class="portrait"></div>
-      </div>
       <ul class="menu-nav">
         <li class="nav-item">
-          <a href="index.html" class="nav-link">
+          <a href="/dist/index.html" class="nav-link">
             Home
           </a>
         </li>
-        <li class="nav-item current">
-          <a href="about.html" class="nav-link">
+        <li class="nav-item">
+          <a href="/dist/about.html" class="nav-link">
             About Me
           </a>
         </li>
         <li class="nav-item">
-          <a href="work.html" class="nav-link">
+          <a href="/dist/work.html" class="nav-link">
             My Work
           </a>
         </li>
         <li class="nav-item">
-          <a href="contact.html" class="nav-link">
+          <a href="/dist/contact.html" class="nav-link">
             Contact Me
           </a>
         </li>
@@ -45,38 +42,35 @@
     </nav>
   </header>
 
-  <main data-router-wrapper>
-    <section data-router-view="about" id="about">
-      <div class="about-content">
-        <h1 class="lg-heading">
-          About <span class="text-secondary">Me</span>
-        </h1>
-        <h2 class="sm-heading">
-          Let me tell you a few things...
-        </h2>
-        <div class="about-info">
-          <img src="img/portrait.jpg" alt="Jason Diep" class="bio-image">
-          <div class="bio">
-            <h3 class="text-secondary sub-heading">Jason Diep</h3>
-            <p>I am a web developer and designer who has a passion for learning new technology. I have been learning
-              for 6 months and currently looking for a junior web developer/designer position as I wish to become more
-              flexible in my work. I enjoy spending time watching web development videos on YouTube particularly by
-              Stefan
-              Mischook, Traversy, and Dev Ed. I have learned how to use HTML5, CSS3, Javascript, Git|GitHub, npm, Sass,
-              MySQL, PHP, and Laravel. Currently I am learning React as it is the most desired framework for Frontend
-              development and I would like to specialise in Frontend development. Other than coding, I enjoy spending
-              time
-              with friends and family, going to the gym, and playing badminton.</p>
-          </div>
-        </div>
+  <main id="swup" class="transition-fade">
+    <h1 class="lg-heading">
+      About <span class="text-secondary">Me</span>
+    </h1>
+    <h2 class="sm-heading">
+      Let me tell you a few things...
+    </h2>
+    <div class="about-info">
+      <img src="img/portrait.jpg" alt="Jason Diep" class="bio-image">
+      <div class="bio">
+        <h3 class="text-secondary sub-heading">Jason Diep</h3>
+        <p>I am a web developer and designer who has a passion for learning new technology. I have been learning
+          for 6 months and currently looking for a junior web developer/designer position as I wish to become more
+          flexible in my work. I enjoy spending time watching web development videos on YouTube particularly by
+          Stefan
+          Mischook, Traversy, and Dev Ed. I have learned how to use HTML5, CSS3, Javascript, Git|GitHub, npm, Sass,
+          MySQL, PHP, and Laravel. Currently I am learning React as it is the most desired framework for Frontend
+          development and I would like to specialise in Frontend development. Other than coding, I enjoy spending
+          time
+          with friends and family, going to the gym, and playing badminton.</p>
       </div>
-    </section>
+    </div>
   </main>
 
   <footer id="main-footer">
     Copyright &copy; 2019
   </footer>
 
+  <script src="../node_modules/swup/dist/swup.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 

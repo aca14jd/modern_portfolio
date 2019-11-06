@@ -9,7 +9,7 @@
   <title>Contact Me</title>
 </head>
 
-<body>
+<body id="bg-img">
   <header>
     <div class="menu-btn">
       <div class="btn-line"></div>
@@ -17,27 +17,24 @@
       <div class="btn-line"></div>
     </div>
     <nav class="menu">
-      <div class="menu-branding">
-        <div class="portrait"></div>
-      </div>
       <ul class="menu-nav">
         <li class="nav-item">
-          <a href="index.html" class="nav-link">
+          <a href="/dist/index.html" class="nav-link">
             Home
           </a>
         </li>
         <li class="nav-item">
-          <a href="about.html" class="nav-link">
+          <a href="/dist/about.html" class="nav-link">
             About Me
           </a>
         </li>
         <li class="nav-item">
-          <a href="work.html" class="nav-link">
+          <a href="/dist/work.html" class="nav-link">
             My Work
           </a>
         </li>
-        <li class="nav-item current">
-          <a href="contact.html" class="nav-link">
+        <li class="nav-item">
+          <a href="/dist/contact.html" class="nav-link">
             Contact Me
           </a>
         </li>
@@ -45,29 +42,26 @@
     </nav>
   </header>
 
-  <main data-router-wrapper>
-    <section data-router-view="contact" id="contact">
-      <div class="contact-content">
-        <h1 class="lg-heading">
-          Contact <span class="text-secondary">Me</span>
-        </h1>
-        <h2 class="sm-heading">
-          This is how you can reach me...
-        </h2>
-        <div class="boxes">
-          <div>
-            <span class="text-secondary">Email:
-            </span> jdiepweb@gmail.com
-          </div>
-        </div>
+  <main id="swup" class="transition-fade">
+    <h1 class="lg-heading">
+      Contact <span class="text-secondary">Me</span>
+    </h1>
+    <h2 class="sm-heading">
+      This is how you can reach me...
+    </h2>
+    <div class="boxes">
+      <div>
+        <span class="text-secondary">Email:
+        </span> jdiepweb@gmail.com
       </div>
-    </section>
+    </div>
   </main>
 
   <footer id="main-footer">
     Copyright &copy; 2019
   </footer>
 
+  <script src="../node_modules/swup/dist/swup.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 
