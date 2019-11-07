@@ -215,6 +215,10 @@ main {
   background: #2c80d3;
   color: #000; }
 
+.cv {
+  margin-top: 20px;
+  width: 130px; }
+
 .transition-fade {
   transition: all 0.4s ease-out;
   opacity: 1;
