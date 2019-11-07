@@ -34,7 +34,6 @@ function removeHamburger() {
         menuNav.classList.add("show");
         navItems.forEach(item => item.classList.add("show"));
         menuBtn.classList.add("hide");
-        console.log("test1");
     }
 }
 
@@ -45,7 +44,6 @@ function addHamburger() {
         menuNav.classList.remove("show");
         navItems.forEach(item => item.classList.remove("show"));
         menuBtn.classList.remove("hide");
-        console.log("test2");
     }
 }
 
